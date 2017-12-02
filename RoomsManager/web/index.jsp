@@ -1,6 +1,6 @@
 <jsp:include page="/WEB-INF/pages/admin/header.jsp">
-    <jsp:param name="title" value="Dashboard"/>
-    <jsp:param name="name" value="dashboard"/>
+    <jsp:param name="title" value="Quan ly phong tro"/>
+    <jsp:param name="name" value="Management"/>
     <jsp:param name="permission" value="admin"/>
 </jsp:include>
 
@@ -8,25 +8,27 @@
 <section class="content">
     <!-- Info boxes -->
     <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="info-box">
-                <span class="info-box-icon bg-aqua"><i class="ion ion-ios-cart-outline"></i></span>
-                <div class="info-box-content">
-                    <span class="info-box-text">Products</span>
-                    <span class="info-box-number">20</span>
+        <a href="view/room.jsp">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-black"><i class="ion-ios-home-outline"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Phòng</span>
+                        <span class="info-box-number">192</span>
+                    </div>
+                    <!-- /.info-box-content -->
                 </div>
-                <!-- /.info-box-content -->
+                <!-- /.info-box -->
             </div>
-            <!-- /.info-box -->
-        </div>
+        </a>
         <!-- /.col -->
 
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
-                <span class="info-box-icon bg-red"><i class="ion ion-ios-location-outline"></i></span>
+                <span class="info-box-icon bg-yellow"><i class="ion-flash"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Destination</span>
-                    <span class="info-box-number">10</span>
+                    <span class="info-box-text">Điện</span>
+                    <span class="info-box-number">3500</span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -39,10 +41,10 @@
 
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
-                <span class="info-box-icon bg-green"><i class="ion ion-ios-compose-outline"></i></span>
+                <span class="info-box-icon bg-aqua"><i class="ion-waterdrop"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Review/Rating</span>
-                    <span class="info-box-number">50</span>
+                    <span class="info-box-text">Nước</span>
+                    <span class="info-box-number">13000</span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
@@ -52,10 +54,23 @@
 
         <div class="col-md-3 col-sm-6 col-xs-12">
             <div class="info-box">
-                <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+                <span class="info-box-icon bg-gray"><i class="ion-wifi"></i></span>
                 <div class="info-box-content">
-                    <span class="info-box-text">Members</span>
-                    <span class="info-box-number">5</span>
+                    <span class="info-box-text">Internet</span>
+                    <span class="info-box-number">50000</span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-blue"><i class="ion-android-contact"></i></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">Người thuê</span>
+                    <span class="info-box-number">500</span>
                 </div>
                 <!-- /.info-box-content -->
             </div>
