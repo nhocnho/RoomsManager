@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -41,7 +42,7 @@ public class UserControllers extends HttpServlet {
             String action = request.getParameter("action");
             MD5Library MD5 = new MD5Library();
             UserDAO dao = new UserDAO();
-
+//login
             if (action.equals("Login")) {
                 System.out.println("Login");
                 String name = request.getParameter("username");
@@ -49,13 +50,15 @@ public class UserControllers extends HttpServlet {
 
                 String passMD5 = MD5Library.md5(pass);
                 if (dao.checkLogin(name, passMD5)) {
+                    HttpSession session = request.getSession();
+                    session.setAttribute("logedUser", "Welcome, " + name);
                     request.getRequestDispatcher(AdminPage).forward(request, response);
                 } else {
                     request.setAttribute("LoginFail", "Username or Password is wrong");
                     request.getRequestDispatcher(LoginPage).forward(request, response);
                 }
             }
-
+// Register
             if (action.equals("Register")) {
                 String username = request.getParameter("username");
                 String password = request.getParameter("password");
@@ -74,6 +77,12 @@ public class UserControllers extends HttpServlet {
                         response.sendRedirect(LoginPage);
                     }
                 }
+            }
+       // Logout     
+            if(action.equals("Logout")){
+                HttpSession session = request.getSession();
+                session.removeAttribute("logedUser");
+                request.getRequestDispatcher(LoginPage).forward(request, response);
             }
         } catch (Exception e) {
 
